@@ -1,6 +1,7 @@
 import streamlit as st
+import pandas
 st.set_page_config(layout="wide")
-col1,col2 = st.columns(2)
+col1,col2 = st.columns([0.7,0.3])
 
 with col1:
     st.image("images/img.jpg",width=500)
@@ -17,3 +18,15 @@ content2 = """
 Below you can find some of the Apps I have built using Python. Feel free to connect!
 """
 st.write(content2)
+
+col3,col4 = st.columns(2)
+df = pandas.read_csv("data.csv",sep=";")
+
+
+with col3:
+    for index,row in df[0:10].iterrows():
+        st.header(row["title"])
+
+with col4:
+    for index,row in df[10:].iterrows():
+        st.header(row["title"])
