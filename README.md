@@ -1,2 +1,5 @@
 # What is this Project?
-This is a web App(Portfolio) to showcase my skills
+This is the App to showcase my skills
+
+**Shashwat**
+

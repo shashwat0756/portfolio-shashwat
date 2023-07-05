@@ -13,26 +13,22 @@ with col2:
     Hi I am Shashwat Shandilya a Python Programmer 
     """
     st.info(content)
+content2 = """
+**Below you can find some of the Apps I have built using Python. Feel free to connect!**
+"""
+st.write(content2)
 
-content2 = """<b>
-Below you can find some of the Apps I have built using Python. Feel free to connect!
-</b>"""
-st.write(content2,unsafe_allow_html=True)
-
-col3, empty_col,col4 = st.columns([1.5,0.5,1.5])
+col3,empty_col,col4 = st.columns([1.5,0.5,1.5])
 df = pandas.read_csv("data.csv",sep=";")
-
-
 with col3:
-    for index,row in df[0:10].iterrows():
+    for index,row in df[:10].iterrows():
         st.header(row["title"])
-        st.write(row["description"],unsafe_allow_html=True)
+        st.write("**" + row["description"] + "**")
         st.image("images/" + row["image"])
         st.write(f"[source code]({row['url']})")
-
 with col4:
-     for index,row in df[10:].iterrows():
+    for index,row in df[10:].iterrows():
         st.header(row["title"])
-        st.write(row["description"])
-        st.image("images/"+ row["image"])
+        st.write("**" + row["description"] + "**")
+        st.image("images/"+row["image"])
         st.write(f"[source code]({row['url']})")
