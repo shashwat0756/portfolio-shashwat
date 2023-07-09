@@ -10,7 +10,8 @@ with col1:
 with col2:
     st.title("Shashwat Shandilya")
     content= """
-    Hi I am Shashwat Shandilya a Python Programmer 
+    Hi I am Shashwat Shandilya a Python Programmer and I am from Ranchi currently doing Btech in CSE from ITER Bhubhaneswar. I wish to use my
+    Technical Skills to contribute to a Team that works at Skill and creates a positive impact on the Society.
     """
     st.info(content)
 content2 = """
