@@ -4,7 +4,7 @@ st.set_page_config(layout="wide")
 col1,col2 = st.columns(2)
 
 with col1:
-    st.image("images/img.jpg",width=500)
+    st.image("images/img.jpg",width=502)
 
 
 with col2:
@@ -14,8 +14,10 @@ with col2:
     Technical Skills to contribute to a Team that works at Skill and creates a positive impact on the Society.
     """
     st.info(content)
+
 content2 = """
-**Below you can find some of the Apps I have built using Python. Feel free to connect!**
+**Below you can find some of the Apps I have built using Python.
+Feel free to connect!**
 """
 st.write(content2)
 
